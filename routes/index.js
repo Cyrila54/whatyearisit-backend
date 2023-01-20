@@ -1,14 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-
 /* GET home page. */
-router.get('/year', function(req, res, next) {
-    let year = new Date();
-    year=year.getFullYear().toString();
-
-    res.json({year:year})
-
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
 });
 
-module.exports = router;
+module.exports = router; 
